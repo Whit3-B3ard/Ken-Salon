@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes translateUp{
+  from {
+    transform: translateY(200px);
+  }
+  to {
+    transform: translateY(0);
+  }
+
+}
+
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out; 
+}
+.invisible {
+  opacity: 0;
+}
+.duration-1000 {
+  transition-duration: 3000ms;
+}
+.translate-up {
+  animation: translateUp 2s ease-in-out;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+/* basket */
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 220px; 
+}
+/* service button */
+.parent:hover .hover-target {
+  color: #10B981; 
+}
+/* font */
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-style: normal;
+}
+/* categories */
+.category-tabs {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  
+}
+
+.tab.active {
+  background-color: #000; /* active color */
+  color: #fff;
+  
+}
+.mySwiper {
+  max-height: 130vh;
+  overflow: hidden;
+   width: 100%;
+   flex: 0 1 auto;
+  
+}
+
+.service-category {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates two columns */
+  gap: 20px; /* Adjust the gap as needed */
+}
+/* basket */
+.basket {
+  padding: 1rem; /* Add padding around the entire basket content */
+  /* border: 8px solid black;
+  border-radius: 2px; */
+  background-color: #f3f3f3;
+  width: 35%; /* Adjust as necessary */
+
+  height: 75vh; /* Adjust as necessary */
+}
+
+.basket-header, .basket-total, .basket-items {
+  padding: 0 1rem; /* Consistent horizontal padding */
+}
+
+.basket-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Consistent bottom margin for each item */
+}
+
+.item-title {
+  flex: 1; /* Allows title to grow as needed, consider adding min-width if necessary */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* This will truncate the text with ellipses if it's too long */
+}
+
+.item-price {
+  min-width: 80px; /* Give enough space for prices to avoid misalignment */
+  text-align: right; /* Align the prices to the right */
+}
+
+.item-action {
+  /* Add any additional styling for the action icons */
+}
